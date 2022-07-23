@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.demo.Facebook_XPath">
+      <class name="com.selenium.demo.RemoveValuefromText_usingClearMethod">
         <methods>
-          <include name="facebook_signup"/>
+          <include name="check_GetAttribute"/>
         </methods>
-      </class> <!-- com.selenium.demo.Facebook_XPath -->
+      </class> <!-- com.selenium.demo.RemoveValuefromText_usingClearMethod -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
