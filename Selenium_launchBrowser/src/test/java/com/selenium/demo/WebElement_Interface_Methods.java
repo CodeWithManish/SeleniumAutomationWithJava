@@ -1,5 +1,7 @@
 package com.selenium.demo;
 
+import java.util.Iterator;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +11,7 @@ import org.openqa.selenium.support.Color;
 import org.testng.annotations.Test;
 
 public class WebElement_Interface_Methods {
-	
+
 	@Test
 	public void VerifyFB_GetLocationMethod() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
@@ -27,14 +29,14 @@ public class WebElement_Interface_Methods {
 		// get the y-coordinate of password field
 		int password_Ycordinate = pwdTB.getLocation().getY();
 		System.out.println(password_Ycordinate);
-		//check whether the Y-coordinate of username and password field are same
-		if (username_Ycordinate==password_Ycordinate) {
+		// check whether the Y-coordinate of username and password field are same
+		if (username_Ycordinate == password_Ycordinate) {
 			System.out.println("Both username and password fields are displayed in the same row");
-		}else{
+		} else {
 			System.out.println("username and password fields are NOT aligned in the same row");
 		}
 	}
-	
+
 	@Test
 	public void verifyInstagram_UNandPassword_HeightAndWidth() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
@@ -44,32 +46,30 @@ public class WebElement_Interface_Methods {
 		Thread.sleep(2000);
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
-		
+
 		WebElement unTB = driver.findElement(By.xpath("//input[@type='text']"));
-		//store the height of username 
+		// store the height of username
 		int username_height = unTB.getSize().getHeight();
-		//store the width of username 
+		// store the width of username
 		int username_width = unTB.getSize().getWidth();
 		System.out.println(username_height);
 		System.out.println(username_width);
-		
+
 		WebElement pwdTB = driver.findElement(By.xpath("//input[contains(@name,'pass')]"));
 		int passwordHeight = pwdTB.getSize().getHeight();
 		int passwordWidth = pwdTB.getSize().getWidth();
-		
-		System.out.println(passwordHeight); 
+
+		System.out.println(passwordHeight);
 		System.out.println(passwordWidth);
-		
-		if (username_height==passwordHeight && username_width==passwordWidth)
-		{
+
+		if (username_height == passwordHeight && username_width == passwordWidth) {
 			System.out.println("Username and password fields are aligned");
-		}
-		else {
+		} else {
 			System.out.println("Username and password fields are NOT aligned");
-			
+
 		}
 	}
-	
+
 	@Test
 	public void verifyInstagram_Usernamefield_lessthanMobileNumberField() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
@@ -79,28 +79,29 @@ public class WebElement_Interface_Methods {
 		Thread.sleep(2000);
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
-		
+
 		WebElement unTB = driver.findElement(By.xpath("//input[@name='username']"));
-		//WebElement unTB = driver.findElement(By.xpath("//span[text()='Phone number, username or email address']"));
-		int username_width = unTB.getSize().getWidth(); 
+		// WebElement unTB = driver.findElement(By.xpath("//span[text()='Phone number,
+		// username or email address']"));
+		int username_width = unTB.getSize().getWidth();
 		System.out.println(username_width);
-		
+
 		WebElement mobileNumTB = driver.findElement(By.xpath("//input[@name='username']"));
-	//	WebElement mobileNumTB = driver.findElement(By.xpath("//input[contains(@aria-label,'Phone number, username or email address')]"));
-		int mobNumWidth = mobileNumTB.getSize().getWidth(); 
+		// WebElement mobileNumTB =
+		// driver.findElement(By.xpath("//input[contains(@aria-label,'Phone number,
+		// username or email address')]"));
+		int mobNumWidth = mobileNumTB.getSize().getWidth();
 		System.out.println(mobNumWidth);
-		
-		if (username_width==mobNumWidth)
-		{
-			System.out.println("Size of Both username and password fields are same" +username_width+" = " + mobNumWidth);
-		}
-		else 
-		{
-			System.out.println("Size of username and password fields are NOT same that is : " +username_width+" Not equals to " + mobNumWidth);
+
+		if (username_width == mobNumWidth) {
+			System.out.println(
+					"Size of Both username and password fields are same" + username_width + " = " + mobNumWidth);
+		} else {
+			System.out.println("Size of username and password fields are NOT same that is : " + username_width
+					+ " Not equals to " + mobNumWidth);
 		}
 	}
-	
-	
+
 	@Test
 	public void AddValueInTextBox_AndRemove() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
@@ -234,7 +235,7 @@ public class WebElement_Interface_Methods {
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
 		String elementType = driver.findElement(By.xpath("//input[@type='text']")).getAttribute("Manish@gmail.com");
-		
+
 		System.out.println(elementType);
 		if (elementType.equalsIgnoreCase("checkbox")) {
 			System.out.println("it is a checkbox");
@@ -279,5 +280,27 @@ public class WebElement_Interface_Methods {
 
 	}
 
+	@Test
+	public void diffwaysofClickingonaButton() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\kmani\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.facebook.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		String xp = "//button[@type='submit']";
+
+		// 1. using click() method
+		driver.findElement(By.xpath(xp)).click();
+
+		// 2. using sendkeys
+		driver.findElement(By.xpath(xp)).sendKeys(Keys.ENTER);
+		/*
+		 * 3. using submit() method this method will work only and only if if the
+		 * element has an attribute called type= 'submit'
+		 */
+		driver.findElement(By.xpath(xp)).submit();
+
+	}
 
 }

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.demo.RemoveValuefromText_usingClearMethod">
+      <class name="com.selenium.demo.WebElement_Interface_Methods">
         <methods>
-          <include name="check_GetAttribute"/>
+          <include name="diffwaysofClickingonaButton"/>
         </methods>
-      </class> <!-- com.selenium.demo.RemoveValuefromText_usingClearMethod -->
+      </class> <!-- com.selenium.demo.WebElement_Interface_Methods -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
