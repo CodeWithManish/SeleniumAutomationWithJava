@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.demo.WebElement_Interface_Methods">
+      <class name="com.selenium.demo.Js_HandlingPopUp">
         <methods>
-          <include name="diffwaysofClickingonaButton"/>
+          <include name="promptPopUp"/>
+          <include name="launchrowser"/>
         </methods>
-      </class> <!-- com.selenium.demo.WebElement_Interface_Methods -->
+      </class> <!-- com.selenium.demo.Js_HandlingPopUp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
