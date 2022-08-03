@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
+<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-29T20:52:48 IST" name="Default suite" finished-at="2022-07-29T20:53:17 IST" duration-ms="28344">
+  <suite started-at="2022-08-03T17:45:56 IST" name="Default suite" finished-at="2022-08-03T17:46:03 IST" duration-ms="6868">
     <groups>
     </groups>
-    <test started-at="2022-07-29T20:52:48 IST" name="Default test" finished-at="2022-07-29T20:53:17 IST" duration-ms="28344">
-      <class name="com.selenium.demo.ActionsClassMethods">
-        <test-method is-config="true" signature="launchrowser()[pri:0, instance:com.selenium.demo.ActionsClassMethods@611889f4]" started-at="2022-07-29T20:52:48 IST" name="launchrowser" finished-at="2022-07-29T20:52:52 IST" duration-ms="3479" status="PASS">
+    <test started-at="2022-08-03T17:45:56 IST" name="Default test" finished-at="2022-08-03T17:46:03 IST" duration-ms="6868">
+      <class name="com.selenium.demo.ListBoxTest">
+        <test-method is-config="true" signature="launchrowser()[pri:0, instance:com.selenium.demo.ListBoxTest@441772e]" started-at="2022-08-03T17:45:56 IST" name="launchrowser" finished-at="2022-08-03T17:46:03 IST" duration-ms="6422" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchrowser -->
-        <test-method signature="gmail_contextClickDemo_mailArchive()[pri:0, instance:com.selenium.demo.ActionsClassMethods@611889f4]" started-at="2022-07-29T20:52:52 IST" name="gmail_contextClickDemo_mailArchive" finished-at="2022-07-29T20:53:17 IST" duration-ms="24805" status="PASS">
+        <test-method signature="hashMapExample_printtheOcuuranceOfPoori()[pri:0, instance:com.selenium.demo.ListBoxTest@441772e]" started-at="2022-08-03T17:46:03 IST" name="hashMapExample_printtheOcuuranceOfPoori" finished-at="2022-08-03T17:46:03 IST" duration-ms="396" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- gmail_contextClickDemo_mailArchive -->
-      </class> <!-- com.selenium.demo.ActionsClassMethods -->
+        </test-method> <!-- hashMapExample_printtheOcuuranceOfPoori -->
+      </class> <!-- com.selenium.demo.ListBoxTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

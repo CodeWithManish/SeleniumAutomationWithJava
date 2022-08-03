@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.demo.Js_HandlingPopUp">
+      <class name="com.selenium.demo.ListBoxTest">
         <methods>
-          <include name="promptPopUp"/>
+          <include name="listBox_test"/>
           <include name="launchrowser"/>
         </methods>
-      </class> <!-- com.selenium.demo.Js_HandlingPopUp -->
+      </class> <!-- com.selenium.demo.ListBoxTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

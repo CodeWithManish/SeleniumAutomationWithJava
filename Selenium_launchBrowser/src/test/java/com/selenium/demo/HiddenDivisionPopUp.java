@@ -28,7 +28,7 @@ public class HiddenDivisionPopUp {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.get("https://www.cleartrip.com/");
 			driver.manage().window().maximize();
-			driver.findElement(By.xpath("//button[@class='flex flex-middle flex-between t-all fs-2 focus:bc-secondary-500 bg-transparent bc-neutral-100 c-pointer bn p-2 hover:bg-neutral-0 br-4']")).click();
+			driver.findElement(By.xpath("(//input[@placeholder='Pick a date'])[1]")).click();
 			driver.findElement(By.linkText("24")).click();
 		}
 		else if(Browser.equals("Firefox")){
@@ -37,7 +37,7 @@ public class HiddenDivisionPopUp {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.cleartrip.com/");
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//button[@class='flex flex-middle flex-between t-all fs-2 focus:bc-secondary-500 bg-transparent bc-neutral-100 c-pointer bn p-2 hover:bg-neutral-0 br-4']")).click();
+		driver.findElement(By.xpath("(//input[@placeholder='Pick a date'])[1]")).click();
 		driver.findElement(By.linkText("24")).click();
 		
 	}else {
