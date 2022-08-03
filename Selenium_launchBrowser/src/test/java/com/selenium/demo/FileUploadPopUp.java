@@ -77,18 +77,5 @@ public class FileUploadPopUp {
 		//close the browser 
 		driver.close();
 	}
-	
-	@Test
-	public void fileUploadUsingAutoIT_HandleWindowPopUp() throws IOException, InterruptedException {
-		driver.get("http://nervgh.github.io/pages/angular-file-upload/examples/simple/");
-		driver.findElement(By.xpath("(//input[@uploader='uploader'])[2]")).click();
-//		WebElement checkElement = new WebDriverWait(driver, Duration.ofSeconds(3))
-//				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@uploader='uploader'])[2]")));
-	Thread.sleep(3000);
-			Runtime.getRuntime().exec("C:\\Users\\kmani\\OneDrive\\Documents\\fileUploadUsingAutoIT1.exe");
 		
-		
-		
-	}
-
 }
